@@ -1,2 +1,2 @@
-# test-flask-heroku
-Flask test app for Heroku
+# test-flask
+Flask test API
