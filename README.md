@@ -29,12 +29,6 @@ make stop      # halt and remove containers
 heroku create flask-resurface
 ```
 
-2. Create PGSQL on Herkoku
-
-```
-heroku addons:create heroku-postgresql:hobby-dev -a flask-resurface
-```
-
 3. Push to Heroku
 
 ```
