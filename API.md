@@ -19,63 +19,27 @@ The following query will return news information availabe in the local databse.
 
 ```
 query{
-  newss{
+  allNews{
     id
     title
-    user{
-      username
-    }
+    body
+
   }
 }
 ```
-
-To add the log you should be authenticated in the system.
-
-## Auth required Mutations
-
-You can create user using `createUser` mutation.
-
-Register User Example:
-
-```
-mutation{
- createUser(username: "anyesh", password: "123456", email: "asd@asd.com"){
-  user{
-    id
-  }
-}
-}
-```
-
-Login Example:
-
-```
-mutation{
- tokenAuth(username: "anyesh", password: "123456"){
-  token
-}
-}
-```
-
-This will return a JWT token which you can attach in the headers for every GQL request.
-
-```
-AUTHORIZATION: "JWT <token here>
-```
-
-View loggedin user info:
 
 ```
 query{
-  user{
-    username
+  newsById(id: "1"){
     id
-    isSuperuser
+    title
+    body
+
   }
 }
 ```
 
-`addNews` mutation requires user to be authenticated.
+`addNews` mutation to add new news.
 
 Example:
 
@@ -85,9 +49,7 @@ mutation{
     news{
       id
       title
-      user{
-          username
-      }
+      body
     }
   }
 }
