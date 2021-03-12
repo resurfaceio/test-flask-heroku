@@ -1,5 +1,7 @@
 import os
 
+BASEDIR = os.path.abspath(os.path.dirname(__file__))
+
 
 class Config(object):
     ENV = os.environ.get("ENV", "DEVELOPMENT")
@@ -13,4 +15,4 @@ class Config(object):
 
 class DefaultConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = "sqlite:///hackernews.db"
+    SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(BASEDIR, "hackernews.db")
