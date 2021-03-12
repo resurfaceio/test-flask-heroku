@@ -6,11 +6,11 @@ from app.modules.users.mutations import UserMutation
 from app.modules.users.queries import UserQuery
 
 
-class RootQuery(UserQuery, NewsQuery, ObjectType):
+class RootQuery(NewsQuery, ObjectType):
     pass
 
 
-class RootMutation(UserMutation, NewsMutation, ObjectType):
+class RootMutation(NewsMutation, ObjectType):
     pass
 
 
