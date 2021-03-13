@@ -6,6 +6,13 @@ Example GraphQL API built with Flask
 * Install `docker` and `docker-compose`
 * Sign up for [Resurface Pilot Edition](https://resurface.io/pilot-edition) access
 
+## Ports Used
+
+* 80 - GraphQL API
+* 4002 - Resurface API Explorer
+* 4001 - Resurface microservice
+* 4000 - Trino database UI
+
 ## Deploy Locally
 
 ```
