@@ -3,14 +3,14 @@
 GraphQL documentation can be accessed from the GraphiQL GUI on `/graphql` endpoint.
 
 ```
-http://localhost:8000/graphql
+http://localhost/graphql
 
 ```
 
 GraphQL endpoint can be accessed at:
 
 ```
-http://localhost:8000/
+http://localhost/
 ```
 
 ## General Queries
