@@ -1,5 +1,4 @@
 # test-flask
-
 Test GraphQL API built with Flask
 
 ## Configure Environment
