@@ -1,8 +1,16 @@
-version: '3'
+version: '3.2'
 
 services:
+  resurface:
+    image: docker.resurface.io/release/pilot
+    container_name: hackernews_resurface
+    ports:
+      - '4000:4000'
+      - '4001:4001'
+      - '4002:4002'
+
   hackernews:
-    container_name: hackernews_flask
+    container_name: hackernews
     build: .
     command: gunicorn --bind :5000 wsgi:application
     ports: ['80:5000']
