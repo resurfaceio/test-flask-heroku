@@ -10,8 +10,8 @@ services:
       - '4002:4002'
 
   hackernews:
+    image: test-flask-hackernews:latest
     container_name: hackernews
-    build: .
     command: gunicorn --bind :5000 wsgi:application
     ports: ['80:5000']
     volumes: ['.:/app']

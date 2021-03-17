@@ -3,11 +3,13 @@ PROJECT_NAME=hackernews
 all: start
 
 start:
-	@docker-compose up --force-recreate --build --detach
+	@docker build -t test-flask-hackernews --no-cache .
+	@docker-compose up --detach
 
 stop:
 	@docker-compose stop
-	@docker-compose down
+	@docker-compose down --volumes
+	@docker image rmi -f test-flask-hackernews:latest
 
 bash:
 	@docker exec -it hackernews bash
@@ -22,6 +24,3 @@ ping:
 restart:
 	@docker-compose stop
 	@docker-compose up
-
-mysql:
-	@docker exec -it hackernews_mysql -u user -p
