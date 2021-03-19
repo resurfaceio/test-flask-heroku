@@ -14,7 +14,5 @@ services:
     container_name: hackernews
     command: gunicorn --bind :5000 wsgi:application
     ports: ['80:5000']
-    volumes: ['.:/app']
-    restart: always
     env_file:
       - .env
