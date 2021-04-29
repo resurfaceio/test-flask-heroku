@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   resurface:
-    image: docker.resurface.io/release/pilot:2.2.3
+    image: docker.resurface.io/release/pilot:2.2.5
     container_name: hackernews_resurface
     ports:
       - '4000:4000'
