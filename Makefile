@@ -1,7 +1,5 @@
 PROJECT_NAME=hackernews
 
-all: start
-
 start:
 	@docker stop resurface || true
 	@docker build -t test-flask-hackernews --no-cache .
