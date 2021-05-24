@@ -8,7 +8,7 @@ start:
 stop:
 	@docker-compose stop
 	@docker-compose down --volumes
-	@docker image rmi -f test-flask-hackernews:latest
+	@docker image rmi -f test-flask-hackernews
 
 bash:
 	@docker exec -it hackernews bash

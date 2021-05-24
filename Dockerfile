@@ -11,3 +11,4 @@ RUN pip install git+https://github.com/resurfaceio/logger-python@master#egg=usag
 RUN python manage.py db init && python manage.py db stamp head && python manage.py db migrate && python manage.py db upgrade
 
 EXPOSE 5000
+CMD gunicorn --bind :5000 wsgi:application
