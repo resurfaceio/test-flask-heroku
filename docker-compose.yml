@@ -3,15 +3,15 @@ version: '3.2'
 services:
   resurface:
     image: resurfaceio/pilot:2.2.8
-    container_name: hackernews_resurface
+    container_name: flask_resurface
     ports:
       - '4000:4000'
       - '4001:4001'
       - '4002:4002'
 
-  hackernews:
-    image: test-flask-hackernews
-    container_name: hackernews
+  flask:
+    image: test-flask
+    container_name: flask
     ports:
       - '80:5000'
     env_file:
