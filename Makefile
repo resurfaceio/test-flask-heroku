@@ -17,8 +17,12 @@ logs:
 	@docker logs -f flask
 
 ping:
+	#todo switch to GraphQL post
 	@curl "http://localhost/ping"
 
 restart:
 	@docker-compose stop
 	@docker-compose up --detach
+
+test:
+	@docker exec -it flask python3 test.py

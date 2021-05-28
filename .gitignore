@@ -1,3 +1,8 @@
+.DS_Store
+.idea
+.vscode
+*.iml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -7,9 +12,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-.idea
 .Python
-.vscode
 build/
 develop-eggs/
 dist/

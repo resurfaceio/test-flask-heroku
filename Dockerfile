@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM resurfaceio/python:2.3.0
 
 WORKDIR /app
 
