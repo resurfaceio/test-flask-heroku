@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   resurface:
-    image: resurfaceio/pilot:2.2.8
+    image: resurfaceio/resurface:2.3.1
     container_name: flask_resurface
     ports:
       - '4000:4000'
